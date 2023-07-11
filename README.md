@@ -6,13 +6,13 @@ It opens a file named "story.txt" in read mode using the `open()` function. The 
 
 It initializes an empty set called words. This set will be used to store unique words found in the story.
 
-It initializes the start_of_word variable with the value -1. This variable will keep track of the starting index of a word enclosed within "<" and ">".
+It initializes the `start_of_word` variable with the value -1. This variable will keep track of the starting index of a word enclosed within "<" and ">".
 
-Two variables target_start and target_end are set to "<" and ">", respectively. These variables represent the start and end characters used to enclose words that need to be replaced.
+Two variables `target_start` and `target_end` are set to "<" and ">", respectively. These variables represent the start and end characters used to enclose words that need to be replaced.
 
-The code enters a loop that iterates over each character in the story string using the enumerate() function, which provides both the index and the character itself.
+The code enters a loop that iterates over each character in the story string using the `enumerate()` function, which provides both the index and the character itself.
 
-Inside the loop, it checks if the current character is equal to target_start ("<"). If it is, it sets the start_of_word variable to the current index, indicating the beginning of a word.
+Inside the loop, it checks if the current character is equal to target_start ("<"). If it is, it sets the `start_of_word` variable to the current index, indicating the beginning of a word.
 
 It checks if the current character is equal to target_end (">") and if start_of_word is not equal to -1. This condition ensures that a word has been started and not already ended. If both conditions are met, it means a complete word has been found, so it extracts the word from the story string using slicing (story[start_of_word: i + 1]) and adds it to the words set using the `add()` method. Then, it resets the start_of_word variable to -1 to mark the end of the current word.
 
