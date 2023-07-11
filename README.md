@@ -14,7 +14,7 @@ The code enters a loop that iterates over each character in the story string usi
 
 Inside the loop, it checks if the current character is equal to target_start ("<"). If it is, it sets the `start_of_word` variable to the current index, indicating the beginning of a word.
 
-It checks if the current character is equal to target_end (">") and if start_of_word is not equal to -1. This condition ensures that a word has been started and not already ended. If both conditions are met, it means a complete word has been found, so it extracts the word from the story string using slicing (story[start_of_word: i + 1]) and adds it to the words set using the `add()` method. Then, it resets the start_of_word variable to -1 to mark the end of the current word.
+It checks if the current character is equal to target_end (">") and if start_of_word is not equal to -1. This condition ensures that a word has been started and not already ended. If both conditions are met, it means a complete word has been found, so it extracts the word from the story string using slicing (story[start_of_word: i + 1]) and adds it to the words set using the `add()` method. Then, it resets the `start_of_word` variable to -1 to mark the end of the current word.
 
 After the loop, an empty dictionary called answers is initialized. This dictionary will store the user's input for each word found in the story.
 
