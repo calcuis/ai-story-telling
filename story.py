@@ -1,5 +1,5 @@
-with open("story.txt", "r") as f:
-    story = f.read()
+with open("story.txt", "r") as file:
+    story = file.read()
 
 words = set()
 start_of_word = -1
